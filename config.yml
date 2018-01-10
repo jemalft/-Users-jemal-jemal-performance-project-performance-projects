@@ -1,0 +1,15 @@
+modules:
+  jmeter:
+    properties:
+      base-uri: http://localhost
+      user-auth: admin:Z00mda1a!
+      username: admin
+      password: Z00mda1a!
+      accountId: 5a2ef7a2e4b043bb0659cddf
+      port: '8080'
+      sourceId: 5a4588ffe4b043bb5a947999
+    xml-jtl-flags:
+      responseData: true
+reporting:
+  - module: final-stats
+    failed-labels: true
