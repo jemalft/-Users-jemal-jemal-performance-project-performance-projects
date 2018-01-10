@@ -1,0 +1,66 @@
+---
+execution:
+  -
+    concurrency: 10
+    hold-for: 5m
+    iterations: 10
+    ramp-up: 50s
+    scenario: "File Upload using REST API"
+included-configs:
+  - config.yml
+modules:
+  jmeter:
+    memory-xmx: 12G
+reporting:
+  -
+    module: console
+  -
+    dump-csv: TaurusResult-10vu/perf_result_csv.csv
+    failed-labels: false
+    module: final-stats
+    percentiles: true
+    summary: true
+    test-duration: true
+  -
+    data-source: pass-fail
+    filename: TaurusResult-10vu/junit-result.xml
+    module: junit-xml
+  -
+    module: blazemeter
+    project: "Taurus test project"
+    report-name: "Taurus test report"
+    test: "Taurus test"
+scenarios:
+   File Upload using REST API:
+    requests:
+      -
+        assert:
+          -
+            assume-success: false
+            contains:
+              - "\"succeeded\""
+              - "\"failed\":0"
+            not: false
+            regexp: false
+            subject: body
+        follow-redirects: true
+        headers:
+          Authorization: "Basic ${__base64Encode(${__P(user-auth)})}"
+        label: "uploading "
+        method: POST
+        upload-files:
+          -
+            mime-type: text/csv
+            param: fileData
+            path: EUR10mb.csv
+        url: "http://${host}:${port}/zoomdata/api/upload/${sourceId}?accountId=${accountId}"
+    store-cache: false
+    store-cookie: false
+    use-dns-cache-mgr: false
+    variables:
+      accountId: 5a2ef7a2e4b043bb0659cddf
+      host: localhost
+      port: "8080"
+      sourceId: 5a4588ffe4b043bb5a947999
+settings:
+  artifacts-dir: TaurusResult-10vu
