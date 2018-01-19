@@ -4,7 +4,7 @@ In this initial phase of performance testing assignment, I have done a bit of re
 or non functional testing Frameworks like Selenium and Gatling.
 
 Taurus test can easily be set up by converting Jmeter performance test plan in the YAML file script.
-The actual test can be executed in command line or NON-GUI mode.For detail steps and reading https://github.com/jemalft/-Users-jemal-jemal-performance-project-performance-projects
+The actual test can be executed in command line or NON-GUI mode.For detail steps to set up and readings refer https://github.com/jemalft/-Users-jemal-jemal-performance-project-performance-projects
 
 In this sample load testing exercise, I will try to analyzing test results and identify the bottlenecks where concurrent users would be failed to upload CSV file and abruptly rises its average response time and latency.
 ###
