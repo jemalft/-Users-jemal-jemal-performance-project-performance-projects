@@ -42,7 +42,7 @@ Figure 2 :  Active Users vs Average Latency, Aggregate behavior when user growin
 ![alt png](https://github.com/jemalft/-Users-jemal-jemal-performance-project-performance-projects/blob/master/Simulation-latency.png)
 
 
-As shown on Figure 2, Average latency goes to zero because the app looks crashed and not accepting and responding to any request.Look how the graph latency is grown when user rise from 5 to 20 concurrent users, this makes sense alike average response time is decreasing.
+As shown on Figure 2, Average latency goes to zero when number of concurrent users reached to 25 because the application accepted high network traffic that hitting the server.On the other hand,the graph latency is grown when user rise from 5 to 20 concurrent users, this makes sense alike average response time is decreasing.
 
 ## Summary
 
