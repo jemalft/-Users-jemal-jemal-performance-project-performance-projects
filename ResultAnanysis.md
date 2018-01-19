@@ -1,6 +1,6 @@
 ## Result Analysis on load testing using Taurus with Jmeter
 
-In my initial phase of performance testing assignment, I have done a bit of research to choose Taurus as performance testing tool of my choice since, Taurus has a good test result reporting capabilities, easy to Integrate into continuous integration pipeline, simplicity, and can run with existed functional
+In this initial phase of performance testing assignment, I have done a bit of research to choose Taurus as performance testing tool of my choice since, Taurus has a good test result reporting capabilities, easy to Integrate into continuous integration pipeline, simplicity, and can run with existed functional
 or non functional testing Frameworks like Selenium and Gatling.
 
 Taurus test can easily be set up by converting Jmeter performance test plan in the YAML file script.
