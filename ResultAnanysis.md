@@ -35,7 +35,7 @@ Figure 1 : Active Users vs Average response time
 
 As shown on figure 1, The avarage response time is increasing in fair fashion when concurrent users load rise from 5 to 15.However after the load grown beyond 15 users,the server start behaving differently and the response time start growing exponsetially for the next 5 user increment.execept a higher average response time and latency the server keep working slowly until that point.
 
-When Jmeter injected additional 5 users(scenario#5) to challenge the application performance,the network traffic became very high and the system get crashed and the server start to complaining by throwing 500 internal server error and “socketException closed” respectively.Perhaps the application botleneck point aligned on when uploading a file for number of concurrent users reached 21.
+When Jmeter injected an additional 5 users(scenario#5) that boosts the load or literally start challenging the application load performance. Due to this, the network traffic becoming higher and higher by incoming requests and the server start to complain and threw 500 internal server error and “socketException closed” respectively. Perhaps the application bottleneck point aligned on when uploading a file for number of concurrent users reached 21.
 
 Figure 2 :  Active Users vs Average Latency, Aggregate behavior when user growing from 5 to 25
 
