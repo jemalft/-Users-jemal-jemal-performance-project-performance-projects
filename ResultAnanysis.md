@@ -33,9 +33,9 @@ Figure 1 : Active Users vs Average response time
 
 ![alt png](https://github.com/jemalft/-Users-jemal-jemal-performance-project-performance-projects/blob/master/Average-response-time.png)
 
-As shown on figure 1, The average response time is increasing when concurrent users rising from 5 to 15.However an additional 5 more active users sending the uploading request, the server start behaving differently and the average response time growing exponentially despite that the server keep working in a very slow fashion until number of concurrent users have grown beyond 20.
+As shown on figure 1, The average response time is increasing when concurrent users go up from 5 to 15.However, when an additional 5 more active users sending 10mb of file uploading request through REST API, the server start behaving differently and the average response time growing exponentially. Despite, that the server keep responding the incoming http resuests in a very slow fashion until number of concurrent users have grown beyond 20.
 
-When Jmeter injected the last 5 users(scenario#5) that literally boosted and challenging the application load performance. Due to this, the network traffic getting higher and higher by the incoming requests to hit server. Eventually the server start complaining and threw 500 internal server error and “socketException closed” respectively. All this server response has proved the app bottleneck point when uploading a file by number of concurrent users just beyond 20.
+When Jmeter injected last 5 users(scenario#5) that literally boosted and challenging the application load performance. Due to this, the network traffic getting higher and higher by the incoming requests to hit server. Eventually the server start complaining and threw 500 internal server error and “socketException closed” respectively. All this server response has proved the app bottleneck point when uploading a file by number of concurrent users just beyond 20.
 
 Figure 2 :  Active Users vs Average Latency, Aggregate behavior when user growing from 5 to 25
 
@@ -46,6 +46,6 @@ As shown on Figure 2, Average latency goes to zero when number of concurrent use
 
 ## Summary
 
-In this simple experiment, we are able to identify the application critical point where the network performance quite low and eventually closed the incoming traffic and requests under queue of REST API calls. Based on the result, This can lead as to a conclusion we are facing non negligible amount of network performance issues for this specific scenario.
+In this simple experiment, we are able to identify the application critical point where the network performance quite low and eventually closed the incoming traffic and requests under queue over server gate way. Based on the result, This can lead as to a conclusion we are facing non negligible amount of network performance issues for this specific scenario.
 
-Why this happened, due to the number of active concurrent user's request hitting the server reached to the maximum that our application could handle.The remark to a possible solution is clear to improve the network performance for specified number of concurrent users. 
+Why this happened, due to the number of active concurrent user's request hitting the server reached to the maximum that our application could handle.The remark to a possible solution is clear, to improve the network performance for specified number of concurrent users. 
