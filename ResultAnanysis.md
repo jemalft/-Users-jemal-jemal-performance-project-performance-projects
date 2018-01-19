@@ -45,6 +45,6 @@ As shown on Figure 2, Average latency goes to zero when number of concurrent use
 
 ## Summary
 
-In this simple experiment, we are able to identify the application critical point where the network performance quite low and eventually closed the incoming traffic and requests under queue over server gate way. Based on the result, This can lead as to a conclusion we are facing non negligible amount of network performance issues for this specific scenario.
+In this simple experiment, we are able to identify the application critical point where the network performance quite low and eventually closed due to incoming requests traffic and requests under queue over the server gate way. Based on the result, This can lead as to a conclusion we are facing non negligible amount of network performance issues for this specific scenario.
 
 Why this happened, due to the number of active concurrent user's request hitting the server reached to the maximum that our application could handle.The remark to a possible solution is clear, to improve the network performance for specified number of concurrent users. 
