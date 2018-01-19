@@ -46,7 +46,7 @@ As shown on Figure 2, Average latency goes to zero because the app looks crashed
 
 ## Summary
 
-In this simple experiment,we are able to identify the application critical point where the network performance quit low and eventually closed the incoming traffic and requests under que of REST API calls.Based on the result,This can lead as to a conclusion we are facing a performance issue dues to low newtwork performance.
+In this simple experiment,we are able to identify the application critical point where the network performance quit low and eventually closed the incoming traffic and requests under que of REST API calls.Based on the result,This can lead as to a conclusion we are facing non negligible amount of newtwork performance issues for this specific scenario.
 
 Why this happened , due to the number of active virtual users or concurrent HTTP request calls seem reached at maximum that our app can handles.and the suggested solution is very clear we have to improve the network performance to eradicate the issue. 
 
